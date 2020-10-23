@@ -318,7 +318,7 @@ h1 {
 }
 
 #nombre2 {
-    background: linear-gradient(to right, #2B9348, #FFFF3F);
+    background: linear-gradient(to right, #2B9348, #e2e23c);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
@@ -490,10 +490,10 @@ form>.fields>.field.quarter {
 }
 
 label {
-    color: #ffffff;
+    color: #80b918;
     display: block;
     font-size: 0.8rem;
-    font-weight: 300;
+    font-weight: 600;
     letter-spacing: 0.2rem;
     line-height: 1.5;
     margin: 0 0 1rem 0;
@@ -516,7 +516,7 @@ textarea {
     transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
     background-color: transparent;
     border-radius: 4px;
-    border: solid 1px #ffffff;
+    border: solid 1px #8d8d8d;
     color: inherit;
     display: block;
     outline: 0;
@@ -814,14 +814,13 @@ input[type="radio"]+label:before {
     width: 100%;
 }
 
-.image.main {
+.image.main1 {
     display: block;
-    margin: 2.5rem 0;
     width: 100%;
 }
 
 .image.main img {
-    width: 25%;
+    width: 5%;
     margin-left: 38%;
 }
 
@@ -1026,12 +1025,13 @@ ul.icons li:last-child {
 
 ul.icons li a {
     border-radius: 100%;
-    box-shadow: inset 0 0 0 1px #ffffff;
+    box-shadow: inset 0 0 0 1px #8d8d8d;
     display: inline-block;
     height: 2.25rem;
     line-height: 2.25rem;
     text-align: center;
     width: 2.25rem;
+    color: #80b918;
 }
 
 ul.icons li a:hover {
@@ -1130,12 +1130,12 @@ button,
     background-color: transparent;
     border-radius: 4px;
     border: 0;
-    box-shadow: inset 0 0 0 1px #ffffff;
-    color: #ffffff !important;
+    box-shadow: inset 0 0 0 1px #8ec920;
+    color: #8ec920 !important;
     cursor: pointer;
     display: inline-block;
-    font-size: 0.8rem;
-    font-weight: 300;
+    font-size: 0.9rem;
+    font-weight: 600;
     height: 2.75rem;
     letter-spacing: 0.2rem;
     line-height: 2.75rem;
@@ -1194,8 +1194,8 @@ input[type="reset"].primary,
 input[type="button"].primary,
 button.primary,
 .button.primary {
-    background-color: #ffffff;
-    color: #1b1f22 !important;
+    background: linear-gradient(to right, #2B9348, #8b8b40);
+    color: #000000 !important;
     font-weight: 600;
 }
 
@@ -1958,7 +1958,7 @@ body.is-preload #footer {
 
 #iconService {
     block-size: 120px;
-    top: 20%;
+    top: 15%;
 }
 
 #iconService1 {
@@ -1983,6 +1983,7 @@ body.is-preload #footer {
 #contacto {
     text-align: left;
     font-size: 1rem;
+    padding-left: 5%;
 }
 
 #matriz {
@@ -1994,6 +1995,19 @@ body.is-preload #footer {
     ;
 }
 
-#iconAddress {
-    block-size: 1%;
+#locate {
+    padding-left: 1%;
+}
+
+.bi {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+    color: #80b918;
+    width: 22px;
+    height: 25px;
+}
+
+.fontStyle {
+    font-family: 'Titillium Web', sans-serif;
 }
