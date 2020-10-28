@@ -258,23 +258,23 @@
             <!-- Contact -->
             <article id="contact">
                 <h2 class="major">Contacto</h2>
-                <form method="post" action="mail.php" name="formsend">
+                <form id="formulario" name="formContacto" method="post" action="process.php">
                     <div class="fields">
                         <div class="field half">
                             <label for="name">Nombre</label>
-                            <input type="text" name="name" id="name" />
+                            <input type="text" name="name" />
                         </div>
                         <div class="field half">
                             <label for="email">Email</label>
-                            <input type="text" name="email" id="email" />
+                            <input type="text" name="email" />
                         </div>
                         <div class="field half">
-                            <label for="telefono">Teléfono</label>
-                            <input type="text" name="telefono" id="telefono" />
+                            <label for="phone">Teléfono</label>
+                            <input type="text" name="phone" />
                         </div>
                         <div class="field half">
                             <label for="message">Message</label>
-                            <textarea name="message" id="message" rows="4"></textarea>
+                            <textarea name="message" rows="4"></textarea>
                         </div>
                         <div class="field half">
                             <input type="submit" value="Enviar mensaje" class="primary" />
@@ -319,6 +319,30 @@
         window.onorientationchange = function() {
             document.body.scrollTop = 0;
         }
+    </script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyBUXFMfZTJPy0kC0G00SAfEd0zkGYBVmSg",
+            authDomain: "aasp-becaa.firebaseapp.com",
+            databaseURL: "https://aasp-becaa.firebaseio.com",
+            projectId: "aasp-becaa",
+            storageBucket: "aasp-becaa.appspot.com",
+            messagingSenderId: "764377119625",
+            appId: "1:764377119625:web:431a295b2862040b3aff58",
+            measurementId: "G-28MF2K0ZRR"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
     </script>
 </body>
 
