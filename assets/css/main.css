@@ -820,7 +820,7 @@ input[type="radio"]+label:before {
 }
 
 .image.main img {
-    width: 5%;
+    width: 25%;
     margin-left: 38%;
 }
 
@@ -1857,6 +1857,7 @@ body.is-preload #header .content .inner {
     -ms-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
 }
 
 #main article .close {
