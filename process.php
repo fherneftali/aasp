@@ -1,37 +1,26 @@
 <?php
-    //Correo destino
-    $correoDest = "fherneftali.fj@gmail.com";
-    
-    //Texto emisor; sólo lo leerá quien reciba el contenido.
-    $textoEmisor = "MIME-VERSION: 1.0\r\n";
-    $textoEmisor .= "Content-type: text/html; charset=UTF-8\r\n";
-    $textoEmisor .= "From: Formulario creado por FherVzla";
+    $nombre = $_POST['name'];
+    $mail = $_POST['email'];
+    $telefono = $_POST['phone'];
+    $msg = $_POST['message'];
 
-    //Recopilacion de los datos via POST
-    $nombre = strip_tags($_POST['name']);
-    $correo = strip_tags($_POST['email']);
-    $telefono = strip_tags($_POST['phone']);
-    $mensaje = strip_tags($_POST['message']);
-    $fecha = time();
-    $fechaFormateada = date("j/n/Y", $fecha);
+    $header = 'From: ' . $mail . " \r\n";
+    $header = "X-Mailer: PHP/" . phpversion() . " \r\n";
+    $header .= "Mime-Version: 1.0 \r\n";
+    $header .= "Content-Type: text/plain";
 
+    $mensaje = "Este mensaje fue enviado por " . $nombre . ",\r\n";
+    $mensaje .= "Su e-mail es: " . $mail . " \r\n";
+    $mensaje .= "Mensaje: " . $_POST['message'] . " \r\n";
+    $mensaje .= "Enviado el " . date('d/m/Y', time());
 
-    //Headers del correo
-    $headers = 'From: ' . $correo . "\r\n".
-                'Reply-To: ' . $correoDest. "\r\n".
-                'X-Mailer: PHP/' . phpversion() .
-                'MIME-Version: 1.0\r\n'.
-                'Content-type: text/html; charset=UTF-8\r\n';
+    $para = 'fherneftali.fj@gmail.com';
+    $asunto = 'Mensaje de AASP';
 
-    //Formato del asunto del correo
-    $asunto = "Contacto WEBAASP_$nombre";
+    mail($para, $asunto, utf8_decode($mensaje), $header);
 
-    //Formato del cuerpo del correo
-    $cuerpo = "<b>Enviado por:</b> " . $nombre . " a las " . $fechaFormateada . "";
-    $cuerpo = "<b>Telefono de contacto:</b> " . $telefono . "";
-    $cuerpo = "<b>E-mail:</b> " . $correo . "";
-    $cuerpo = "<b>Mensaje:</b> " . $mensaje;
+    //header("Location:index.html");
 
-    //Envio del mensaje
-    mail($correoDest, $asunto, $cuerpo, $textoEmisor);
+    echo"<script>alert('correo enviado')</script>";
+    echo"<script>setTimeout(\"location.href='index.html'\",1000)</script>";
  ?>        
