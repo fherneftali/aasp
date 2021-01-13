@@ -373,7 +373,6 @@ sup {
 }
 
 blockquote {
-    border-left: solid 4px #ffffff;
     font-style: italic;
     margin: 0 0 2rem 0;
     padding: 0.5rem 0 0.5rem 2rem;
@@ -1979,6 +1978,13 @@ body.is-preload #footer {
 #titulo {
     color: #98DC6A;
     font-size: 1.2rem;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#titulo2 {
+    color: #98DC6A;
+    font-size: 1rem;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 #contacto {
